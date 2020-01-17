@@ -46,7 +46,7 @@ library.each  do |keys, mean_emo|
 end
 
 def get_english_meaning(file, emoticon)
-result = load_library(file)[:get_meaning]
+result = load_library(file)[:get_meaning][emoticon]
 p result
 
 end
