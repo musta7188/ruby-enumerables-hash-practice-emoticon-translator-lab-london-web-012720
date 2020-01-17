@@ -46,7 +46,20 @@ library.each  do |keys, mean_emo|
 end
 
 def get_english_meaning(file, emoticon)
-result = load_library(file)[:get_meaning][emoticon]
-p result
+library = load_library(file)
 
+library.each do |keys, hashes|
+  hashes.map do |list|
+list.each do |eng|
+
+found = list.any?(emoticon)
+
+if found === true
+  return library[keys][eng]
+end
+
+end
+end
+end
+return "Sorry, that emoticon was not found"
 end
