@@ -48,10 +48,5 @@ end
 def get_english_meaning(file, emoticon)
 result = load_library(file)['get_meaning']
 p result
-end
 
-end
-end
-end
-return "Sorry, that emoticon was not found"
 end
